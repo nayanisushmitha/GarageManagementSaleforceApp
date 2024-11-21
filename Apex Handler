@@ -1,0 +1,25 @@
+*******************************************************************APEX HANDLER****************************************************************
+
+public class AmountDistributionHandler {
+public static void amountDist(list<Appointment c> listApp){ list<Service_records c> serList = new list <Service_records c>(); for(Appointment c app : listApp){
+if(app.Maintenance_service c == true && app.Repairs c == true && app.Replacement_Parts c == true){
+app.Service_Amount  c = 10000;
+}
+else if(app.Maintenance_service c == true && app.Repairs c == true){ app.Service_Amount c = 5000;
+}
+
+else if(app.Maintenance_service c == true && app.Replacement_Parts c == true){ app.Service_Amount c = 8000;
+}
+else if(app.Repairs c == true && app.Replacement_Parts c == true){ app.Service_Amount c = 7000;
+}
+else if(app.Maintenance_service c == true){ app.Service_Amount c = 2000;
+}
+else if(app.Repairs c == true){ app.Service_Amount c = 3000;
+}
+else if(app.Replacement_Parts c == true){ app.Service_Amount c = 5000;
+}
+
+
+}
+}
+}
